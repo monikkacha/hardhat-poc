@@ -11,7 +11,7 @@ contract Lock {
     event Withdrawal(uint256 amount, uint256 when);
 
     constructor(uint256 _unlockTime) payable {
-        require(block.timestamp < _unlockTime, "Version 2");
+        require(block.timestamp < _unlockTime, "Version 3");
 
         unlockTime = _unlockTime;
         owner = payable(msg.sender);
